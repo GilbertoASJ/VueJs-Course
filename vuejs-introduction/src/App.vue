@@ -1,25 +1,29 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <ButtonVue></ButtonVue>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    // Importação dos componentes
+    // import HelloWorld from './components/HelloWorld.vue'
+    import ButtonVue from './components/ButtonVue.vue'
+
+    // Por padrão exportamos o componente App e em "components:", colocamos os componentes que o App depende, ou seja, a aplicação não funciona se eles não forem utilizados.
+    export default {
+        name: 'App',
+        components: {
+            ButtonVue
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
 </style>
