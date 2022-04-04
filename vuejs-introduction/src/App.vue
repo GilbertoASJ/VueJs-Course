@@ -1,5 +1,6 @@
 <template>
     <ButtonVue></ButtonVue>
+    <Form></Form>
 </template>
 
 <script>
@@ -7,12 +8,14 @@
     // Importação dos componentes
     // import HelloWorld from './components/HelloWorld.vue'
     import ButtonVue from './components/Buttons/ButtonVue.vue'
+    import Form from './components/Form.vue'
 
     // Por padrão exportamos o componente App e em "components:", colocamos os componentes que o App depende, ou seja, a aplicação não funciona se eles não forem utilizados.
     export default {
         name: 'App',
         components: {
             ButtonVue,
+            Form,
         }
     }
 </script>
