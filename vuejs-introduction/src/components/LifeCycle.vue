@@ -1,5 +1,5 @@
 <template>
-	<h3>Meu nome é {{ name }}</h3>
+	<h3>Olá {{ name }}</h3>
 </template>
 
 <script>
@@ -22,7 +22,7 @@
 
 			setTimeout(() => {
 
-				this.name = 'Júnior';
+				this.name = 'John';
 			}, 2000)
 		}
 	}
