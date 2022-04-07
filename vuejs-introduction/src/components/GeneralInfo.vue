@@ -12,6 +12,9 @@
 
 		<!-- Diretiva simplista para exibir informação na tela -->
 		<p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
+		<p>
+			Para acessar meu portfólio <a v-bind:href="portfolioLink" target="_blank">clique aqui!</a>
+		</p>
 	</div>
 </template>
 
@@ -23,8 +26,15 @@
 			return {
 				isWorking: true,
 				showEmail: true,
-				email: 'gilberto@gmail.com'
+				email: 'gilberto@gmail.com',
+				portfolioLink: 'https://google.com.br'
 			}
 		}
 	}
 </script>
+
+<style>
+	ul {
+		list-style: none;
+	}
+</style>
