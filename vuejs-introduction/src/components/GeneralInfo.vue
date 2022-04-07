@@ -49,8 +49,9 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	ul {
 		list-style: none;
+		padding: 0;
 	}
 </style>

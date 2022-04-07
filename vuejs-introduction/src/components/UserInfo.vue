@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="gDivUserInfo">
 		<h3>Dados do usuário: {{ name }}</h3>
 		<UserPicture />
 		<GeneralInfo />
@@ -24,3 +24,12 @@
 		}
 	}
 </script>
+
+<style scoped>
+	div.gDivUserInfo {
+		max-width: 450px;
+		border-radius: 20px;
+		padding: 16px;
+		box-shadow: 10px 5px 60px #000;
+	}
+</style>
