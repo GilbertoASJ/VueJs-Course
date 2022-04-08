@@ -31,5 +31,6 @@
 		border-radius: 20px;
 		padding: 16px;
 		box-shadow: 10px 5px 60px #000;
+		margin: 60px auto;
 	}
 </style>
