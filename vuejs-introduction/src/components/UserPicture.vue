@@ -1,7 +1,5 @@
 <template>
-	<!-- 
-		Ao invés de utilizar a forma escrita 'v-bind', podemos utilizar um 'short-code', assim utilizando apenas ':' 
-	-->
+	<!-- Ao invés de utilizar a forma escrita 'v-bind', podemos utilizar um 'short-code', assim utilizando apenas ':' -->
 	<img :src="avatarImg" :alt="avatarImgAlt">
 </template>
 

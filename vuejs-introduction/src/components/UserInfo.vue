@@ -27,7 +27,7 @@
 
 <style scoped>
 	div.gDivUserInfo {
-		max-width: 450px;
+		width: 400px;
 		border-radius: 20px;
 		padding: 16px;
 		box-shadow: 10px 5px 60px #000;

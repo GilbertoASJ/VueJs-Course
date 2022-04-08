@@ -3,16 +3,31 @@
 		<!-- Diretivas if else -->
 		<p v-if="isWorking">Estou trabalhando :)</p>
 		<p v-else>No momento estou em busca de novas oportunidades</p>
-		<p>Estou utilizando no momento as seguintes tecnologias: </p>
-		<ul>
-			<li>HTML e CSS</li>
-			<li>Javascript com Vuejs</li>
-			<li>Back-end com PHP</li>
-		</ul>
+		<p>No momento utilizando as seguintes tecnologias: </p>
 
-		<div>
-			<button @click="handleShowEmail">{{ buttonText }}</button>
+		<div class="gTechonologiesDiv">
+			<div>
+				<p><strong>Front-end:</strong></p>
+
+				<!-- Diretiva v-for realizando uma listagem de tecnologias com base nos dados retornados em 'data', o elemento 'index', é o índice de cada elemento gerado automaticamente pelo vue, e precisa ser indicado no v-bind:key -->
+				<ul>
+					<li v-for="(technology, index) in frontEndTechnologies" :key="index">
+						{{ technology }}
+					</li>
+				</ul>
+			</div>
+
+			<div>
+				<p><strong>Back-end:</strong></p>
+				<ul>
+					<li v-for="technology in backEndTechnologies" :key="technology.id">
+						{{ technology.languageName }}
+					</li>
+				</ul>
+			</div>
 		</div>
+
+		<div><button class="btnEmail" @click="handleShowEmail">{{ buttonText }}</button></div>
 
 		<!-- Diretiva simplista para exibir informação na tela -->
 		<p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
@@ -31,6 +46,12 @@
 				email: 'gilberto@gmail.com',
 				portfolioLink: 'https://google.com.br',
 				buttonText: "Exibir e-mail",
+				frontEndTechnologies: ['HTML5', 'CSS3', 'JavaScript'],
+				backEndTechnologies: [
+					{id: 1, languageName: 'PHP'},
+					{id: 2, languageName: 'Laravel'},
+					{id: 3, languageName: 'PostgreSQL'},
+				]
 			}
 		},
 		methods: {
@@ -53,5 +74,20 @@
 	ul {
 		list-style: none;
 		padding: 0;
+	}
+
+	button.btnEmail {
+		border: 0;
+		background: #fff;
+		padding: 10px 15px;
+		border-radius: 9px;
+		cursor: pointer;
+	}
+
+	div.gTechonologiesDiv {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
 	}
 </style>
