@@ -1,9 +1,5 @@
 <template>
-    <ReuseComponent />
     <UserInfo />
-    <ReuseComponent />
-    <ReuseComponent />
-    <ReuseComponent />
 </template>
 
 <script>
@@ -15,14 +11,13 @@
     // import LifeCycle from './components/LifeCycle.vue'
     import UserInfo from './components/UserInfo.vue'
     // import MutipleEvents from './components/MutipleEvents.vue'
-    import ReuseComponent from './components/ReuseComponent.vue'
+    // import ReuseComponent from './components/ReuseComponent.vue'
 
     // Por padrão exportamos o componente App e em "components:", colocamos os componentes que o App depende, ou seja, a aplicação não funciona se eles não forem utilizados.
     export default {
         name: 'App',
         components: {
             UserInfo,
-            ReuseComponent
         }
     }
 </script>

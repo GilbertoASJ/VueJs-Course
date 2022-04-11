@@ -2,7 +2,7 @@
 	<div class="gDivUserInfo">
 		<h3>Dados do usuário: {{ name }}</h3>
 		<UserPicture />
-		<GeneralInfo />
+		<GeneralInfo propEmail="teste@email.com" />
 	</div>
 </template>
 
@@ -31,6 +31,6 @@
 		border-radius: 20px;
 		padding: 16px;
 		box-shadow: 10px 5px 60px #000;
-		margin: 60px auto;
+		margin: 0 auto;
 	}
 </style>

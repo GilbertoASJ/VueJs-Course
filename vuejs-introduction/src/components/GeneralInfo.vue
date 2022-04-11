@@ -31,6 +31,7 @@
 
 		<!-- Diretiva simplista para exibir informação na tela -->
 		<p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
+		<p>{{ propEmail }}</p>
 		<p>Para acessar meu portfólio <a v-bind:href="portfolioLink" target="_blank">clique aqui!</a></p>
 	</div>
 </template>
@@ -39,6 +40,9 @@
 	
 	export default {
 		name: 'GeneralInfo',
+		props: {
+			propEmail: String
+		},
 		data() {
 			return {
 				isWorking: true,
