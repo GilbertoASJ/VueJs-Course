@@ -2,7 +2,7 @@
 	<div>
 		<!-- Diretivas if else -->
 		<p v-if="isWorking">Estou trabalhando :)</p>
-		<p v-else>No momento estou em busca de novas oportunidades</p>
+		<p v-else>Em busca de novas oportunidades</p>
 		<p>No momento utilizando as seguintes tecnologias: </p>
 
 		<div class="gTechonologiesDiv">
@@ -31,7 +31,6 @@
 
 		<!-- Diretiva simplista para exibir informação na tela -->
 		<p v-show="showEmail">Mande uma mensagem para: {{ email }}</p>
-		<p>{{ propEmail }}</p>
 		<p>Para acessar meu portfólio <a v-bind:href="portfolioLink" target="_blank">clique aqui!</a></p>
 	</div>
 </template>
@@ -41,13 +40,12 @@
 	export default {
 		name: 'GeneralInfo',
 		props: {
-			propEmail: String
+			email: String,
+			isWorking: Boolean,
 		},
 		data() {
 			return {
-				isWorking: true,
 				showEmail: false,
-				email: 'gilberto@gmail.com',
 				portfolioLink: 'https://google.com.br',
 				buttonText: "Exibir e-mail",
 				frontEndTechnologies: ['HTML5', 'CSS3', 'JavaScript'],

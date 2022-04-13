@@ -2,7 +2,9 @@
 	<div class="gDivUserInfo">
 		<h3>Dados do usuário: {{ name }}</h3>
 		<UserPicture />
-		<GeneralInfo propEmail="teste@email.com" />
+
+		<!-- Ao passar uma prop podemos utilizar o v-bind: para mostrar que queremos passar um valor de data() -->
+		<GeneralInfo :email="email" :isWorking=true />
 	</div>
 </template>
 
@@ -20,6 +22,7 @@
 		data() {
 			return {
 				name: "Gilberto",
+				email: "gilberto@email.com",
 			}
 		}
 	}
